@@ -10,9 +10,9 @@
 //Il cliente potrà sia comprare i prodotti come ospite, senza doversi registrarsi nello store, oppure può iscriversi e creare un account per ricevere cosi il 20% di sconto.
 //Il cliente effettua il pagamento dei prodotti nel carrello con la carta di credito, che non deve essere scaduta. */
 
-class products
+class Products
 {
-    public function __construct(public string $title, public string $image, public int $price, public categories $categories, public types $types)
+    public function __construct(public string $title, public string $image, public int $price, public Categories $categories, public Types $types)
     {
         $this->title = $title;
         $this->image = $image;
@@ -22,13 +22,13 @@ class products
     }
 }
 
-class categories extends products
+class Categories extends Products
 {
     public $dogs;
     public $cats;
 }
 
-class types extends products
+class Types extends Categories
 {
     public $foods;
     public $houses;
@@ -39,6 +39,7 @@ class types extends products
 
 }
 
+$chicken_sticks = new Products('Stick di pollo', 'pollo.jpg', 5, )
 
 
 
@@ -48,8 +49,4 @@ class types extends products
 
 
 
-
-
-
-
-?>
+    ?>
