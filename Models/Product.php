@@ -1,7 +1,7 @@
 <?php
 
-require_once __DIR__ . '/Category.php';
-require_once __DIR__ . '/Type.php';
+require __DIR__ . '/Category.php';
+require __DIR__ . '/Type.php';
 class Product
 {
     public function __construct(public string $title, public string $image, public int $price, public Category $category, public Type $type)
