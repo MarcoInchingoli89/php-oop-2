@@ -16,20 +16,57 @@ require_once __DIR__ . '/Models/Type.php';
 
 
 $products = [
-    $stick_di_pollo = new Product('Stick di Pollo', 'https://arcaplanet.vtexassets.com/arquivos/ids/260683/vitakraft-pure-chicken-bonas-bastoncini-pollo-e-carne.jpg?v=1757075367', 5.99, new Category('Cane'), new Type('Cibo')),
-    $scatoletta = new Product('Scatoletta', 'https://egress.storeden.net/gallery/6123799c5fb8e0512818534b/file.jpg', 2.50, new Category('Gatto'), new Type('Cibo')),
-    $topolino_giocattolo = new Product('Topolino Giocattolo', 'https://www.moby-dick.it/image/cache/data/Foto%20Prodotti/Gatti/giochi/camon-gioco-topo-meccanico-500x500.jpg', 3, new Category('Gatto'), new Type('Giocattolo')),
-    $cuccia = new Product('Cuccia', 'https://arcaplanet.vtexassets.com/arquivos/ids/225141/merci-cane-cuccia-ovale-morbida-tartan.jpg?v=1757207437', 30, new Category('Cane'), new Type('Cuccia')),
-    $guinzaglio = new Product('Guinzaglio', 'https://shop-cdn-m.mediazs.com/bilder/guinzaglio/avvolgibile/a/corda/flexi/new/classic/s/m/5/800/252304_pla_flexi_new_classic_seilleine_s_rot_5m_hs_01_5.jpg', 24, new Category('Cane'), new Type('Accessorio')),
-    $pettorina = new Product('Pettorina', 'https://d2oqznxcujm0s2.cloudfront.net/it_it%2Fpettorina-sonia-painterswife%2F8333%2FHD-1-023a593b-c3b8-43b0-833e-f7c62c673902.jpeg', 27, new Category('Cane'), new Type('Pettorina'))
+    $stick_di_pollo = new Product('Stick di Pollo', 'https://picsum.photos/500?random=1', 5.99, new Category('Cane'), new Type('Cibo')),
+    $scatoletta = new Product('Scatoletta', 'https://picsum.photos/500?random=2', 2.50, new Category('Gatto'), new Type('Cibo')),
+    $topolino_giocattolo = new Product('Topolino Giocattolo', 'https://picsum.photos/500?random=3', 3, new Category('Gatto'), new Type('Giocattolo')),
+    $cuccia = new Product('Cuccia', 'https://picsum.photos/500?random=4', 30, new Category('Cane'), new Type('Cuccia')),
+    $guinzaglio = new Product('Guinzaglio', 'https://picsum.photos/500?random=5', 24, new Category('Cane'), new Type('Accessorio')),
+    $pettorina = new Product('Pettorina', 'https://picsum.photos/500?random=6', 27, new Category('Cane'), new Type('Pettorina'))
 ];
 
-var_dump($products);
-
-
-
-
-
+/* var_dump($products); */
 
 
 ?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <title>Per Shop Online</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <?php foreach ($products as $product): ?>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="<? $product -> image ?>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
