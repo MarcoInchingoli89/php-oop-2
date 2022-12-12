@@ -13,7 +13,11 @@ class Type
 
 
 $food = new Type('Cibo');
-var_dump($food);
+$toy = new Type('Giocattolo');
+$house = new Type('Cuccia');
+$accessorie = new Type('Accessorio');
+$harness = new Type('Pettorina');
+/* var_dump($food); */
 
 
 
