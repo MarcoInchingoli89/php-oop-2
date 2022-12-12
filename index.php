@@ -12,23 +12,9 @@
 
 require __DIR__ . '/Models/Product.php';
 require __DIR__ . '/Models/Category.php';
-
-class Type extends Product
-{
-
-    public function __construct(public string $name)
-    {
-        $this->name = $name;
-    }
+require __DIR__ . '/Models/Type.php';
 
 
-/* public $foods;
-public $houses;
-public $harness;
-public $toys;
-public $accessories;
-public $clothes; */
-}
 
 /* class Food extends Product
 {
