@@ -12,17 +12,32 @@
 
 class products
 {
-    public function __construct(public string $title, public string $image, public int $price, public string $category_icon, public string $product_type)
+    public function __construct(public string $title, public string $image, public int $price, public categories $categories, public types $types)
     {
         $this->title = $title;
         $this->image = $image;
         $this->price = $price;
-        $this->category_icon = $category_icon;
-        $this->product_type = $product_type;
+        $this->categories = $categories;
+        $this->types = $types;
     }
 }
 
+class categories extends products
+{
+    public $dogs;
+    public $cats;
+}
 
+class types extends products
+{
+    public $foods;
+    public $houses;
+    public $harness;
+    public $toys;
+    public $accessories;
+    public $clothes;
+
+}
 
 
 
