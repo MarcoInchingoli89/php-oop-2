@@ -11,7 +11,7 @@ class Category
 $cat = new Category('Gatto');
 $dog = new Category('Cane');
 
-var_dump($cat, $dog);
+/* var_dump($cat, $dog); */
 
 
 
