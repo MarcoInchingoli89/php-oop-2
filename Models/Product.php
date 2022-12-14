@@ -2,29 +2,31 @@
 
 require __DIR__ . '/Category.php';
 require __DIR__ . '/Type.php';
+require __DIR__ . '/PriceZeroException.php';
 class Product
 {
     public function __construct(public string $title, public string $image, public int $price, public Category $category, public Type $type)
     {
         $this->title = $title;
         $this->image = $image;
-        $this->price = $price;
+        /* $this->price = $price; */
+        $this->set_price($price);
         $this->category = $category;
         $this->type = $type;
     }
 
-/*  public function set_price(int $price)
-{
-try {
-if (($price) == 0) {
-throw new Exception("Il prezzo deve essere superiore a zero!");
-}
-$this->price = $price;
-} catch (Exception $e) {
-echo $e->getMessage();
-die();
-}
-} */
+    public function set_price(int $price)
+    {
+        //try {
+        if (($price) == 0) {
+            throw new Exception("Il prezzo deve essere superiore a zero!");
+        }
+        $this->price = $price;
+        // } catch (Exception $e) {
+        //     echo $e->getMessage();
+        //     die();
+        // }
+    }
 }
 
 /* $stick_di_pollo = new Product('Stick di Pollo', 'Immagine.jpg', 5, new Category('Cane'), new Type('Cibo'));
